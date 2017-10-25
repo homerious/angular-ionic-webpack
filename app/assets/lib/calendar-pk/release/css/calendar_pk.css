@@ -1,0 +1,38 @@
+.calendar-pk {
+  width: 100%;
+  max-width: 100%;
+  background-color: white;
+  border-top: 1px solid #969696;
+  border-bottom: 1px solid #969696;
+  table-layout: fixed; }
+  .calendar-pk td,
+  .calendar-pk th {
+    text-align: center;
+    vertical-align: middle; }
+  .calendar-pk > thead > tr {
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #969696; }
+    .calendar-pk > thead > tr > th {
+      line-height: 2.5em;
+      border-right: 1px solid #969696; }
+      .calendar-pk > thead > tr > th:first-child {
+        border-right: 2px solid #969696; }
+  .calendar-pk > tbody > tr > td {
+    border-bottom: 1px solid #969696;
+    border-right: 1px solid #969696; }
+    .calendar-pk > tbody > tr > td:first-child {
+      background-color: #f0f0f0;
+      border-right: 2px solid #969696; }
+  .calendar-pk .monthview-primary {
+    background-color: #d34121;
+    color: white; }
+  .calendar-pk .monthview-secondary {
+    background-color: #e5745b; }
+  .calendar-pk .monthview-current {
+    font-weight: bold;
+    font-size: 1.2em; }
+  .calendar-pk .text-muted {
+    color: #323232; }
+    .click{
+      background-color: #81e481;
+    }

@@ -1,0 +1,786 @@
+// body {
+//   background: #efefef;
+// }
+.border_none {
+  border: none
+}
+.border_bottom {
+  border-bottom: 1px solid #ccc;
+}
+.border_left {
+  border-left: 1px solid #ddd;
+}
+.border_radius {
+  border-radius: 0px;
+}
+// //.border_left_none {
+//   border-right: none;
+// }
+.width100 {
+  width: 100%;
+}
+.font-default {
+  font-size: 16px;
+}
+.font_18 {
+  font-size: 18px;
+}
+.color_red {
+  color: #ff5858;
+}
+.color_white {
+  color: #fff;
+}
+.color_blue {
+  color: #17bddf
+}
+.float_none {
+  float: none;
+}
+.background_red {
+  background: #ff5858;
+}
+.background_blue {
+  background: #17bddf;
+}
+.background_white {
+  background: #fff;
+}
+.margin_auto {
+  margin: auto;
+}
+.margin_top {
+  margin-top: 10px;
+}
+.margin-top_6 {
+  margin-top: 6px;
+}
+.margin_bottom_20 {
+  margin-bottom: 20px;
+}
+.margin_bottom_59 {
+  margin-bottom: 59px;
+}
+
+/**********登录界面的样式  开始
+.login_body{
+            @extend .font-default;
+            width: 80%;
+            margin:auto;
+            .top_im{
+                        width:60%;
+                        margin:2.5em auto;
+                        img{
+                                    @extend .width100;
+                        }
+            }
+            .input_detail{
+                        input{
+                                    @extend .border_radius;
+                                    border-bottom:1px solid #ddd;
+                                    padding: 28px 4px;
+                        }
+                        .code{
+                                    @extend .border_bottom;
+                                    input{
+                                                @extend .float_none;
+                                                @extend .border_none;
+                                                display: inline-block;
+                                    }
+                                    button{
+                                                @extend .float_none;
+                                                @extend .border_none;
+                                                @extend .color_red;
+                                                @extend .border_radius;
+                                                @extend .background_white;
+                                                margin-top:2px;
+                                                border-left:1px solid #dddddd !important;
+                                                display: inline-block;
+                                    }
+                        }
+            }
+            .login_btn{
+                        @extend .background_blue;
+                        @extend .border_none;
+                        @extend .border_radius;
+                        color:#fff;
+                        letter-spacing: 3px;
+                        margin-top:3em;
+                        //padding:12px 18px;
+            }
+}
+//******************登录界面的样式  结束
+
+//******************badge 样式
+.sub_title{
+            margin-top:8px;
+            position: relative;
+            font-size:17px;
+}
+.num{
+            @extend .background_red;
+            position: absolute;
+            font-size:15px;
+            border-radius:50%;
+            color:#fff;
+            width:21px;
+            height: 21px;
+            top:-9px;
+}
+//*******************
+
+//***************  登录页标题样式
+.body_bar{
+            @extend .border_bottom;
+            @extend .font-default;
+            @extend .background_white;
+            padding:12px 6px 2px;
+            .back{
+                        padding: 0 0.8em;
+            }
+            .top_title{
+                        font-size:18px;
+                        margin-top:-28px;
+            }
+}
+//*********************
+
+//间隔样式
+.gap{height:20px;background:#efefef;}
+//间隔样式
+
+//****************   配送端标题样式
+.delivery_bar{
+            @extend .font-default;
+            @extend .background_white;
+            padding:13px 6px 2px;
+            position:fixed;
+            width:100%;
+            top:0;
+            z-index: 9999;
+            border-top:1px solid #ddd;
+            .top_title1{
+                        font-size:18px;
+                        margin-top:-26px;
+                        width:65%;
+                        position: relative;
+                        display:inline-block;
+            }
+            .badge{
+                        @extend .background_red;
+                        @extend .color_white;
+                        position: absolute;
+                        top:-7px;
+            }
+            .search{
+                        margin-top:-2.4em;
+                        padding: 0 0.8em;
+                        img{
+                                    width:1.5em;
+                        }
+            }
+            .btn_search{
+                        margin-top:-8px;
+                        float: right;
+                        img{
+                                    width:1.5em;
+                        }
+            }
+}
+
+.back_arrow{
+            padding: 0.8em 1.5em 0.8em 0.8em;
+            img{
+                        width:0.6em;
+            }
+}
+//****************
+
+//配送端选择标题样式
+.choose_bar{
+            @extend .background_white;
+            text-align: center;
+            padding:1em 0;
+            div{
+                        display:inline-block;
+                        margin-left:2.4em;
+                        img{
+                                    width:1em;
+                                    margin-left:0.8em;
+                        }
+            }
+}
+//配送端选择标题样式
+
+//*********角标样式
+.img_mark{
+            width: 30%;
+            position: absolute;
+            top:-6px;
+}
+.img_mark_title{
+            @extend .color_white;
+            position: absolute;
+            top:-5px;
+            left:10px;
+            letter-spacing: 3px;
+}
+//*********角标样式
+
+//********放格内容样式
+.lists_details {
+            @extend .border_left;
+            padding:25px 0;
+            border:1px solid #ccc;
+            div img{
+                        width:2.5em;
+                        margin-top:12px;
+            }
+}
+//********方格内容样式
+
+.default{
+            position: relative;
+            @extend .margin_bottom_20;
+            .body_lists{
+                        @extend .margin_auto;
+                        @extend .background_white;
+            }
+}
+.water{
+            position: relative;
+            @extend .background_white;
+            @extend .margin_bottom_20;
+}
+.wash{
+            position:relative;
+            @extend .background_white;
+            @extend .margin_bottom_20;
+}
+//************************
+
+//首页底部菜单选择样式
+.tabs-red > .tabs,
+.tabs.tabs-red {
+            border-color: #fff;
+            background-color: #fff;
+            background-image: linear-gradient(0deg, #fff, #fff 50%, transparent 50%);
+  color: #ff5858; }
+.tabs-red > .tabs .tab-item .badge,
+.tabs.tabs-red .tab-item .badge {
+            background-color: #fff;
+  color: #ff5858; }
+.tabs-striped.tabs-red .tabs {
+  background-color: #fff; }
+
+.tabs-striped.tabs-red .tab-item {
+            color: rgba(0, 0, 0, 0.6);
+  opacity: 1; }
+.tabs-striped.tabs-red .tab-item .badge {
+  opacity: 0.4; }
+.tabs-striped.tabs-red .tab-item.tab-item-active, .tabs-striped.tabs-assertive .tab-item.active, .tabs-striped.tabs-assertive .tab-item.activated {
+            margin-top: -2px;
+            color: #ff5858;
+            border-style: solid;
+            border-width: 4px 0 0 0;
+  border-color: #ff5858; }
+
+
+/*公用样式*/
+.txt-center {
+  text-align: center;
+}
+.clear {
+  clear: both;
+}
+.button.button-block2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+/*定位*/
+.position-ab {
+  position: absolute;
+}
+.position-rt {
+  position: relative;
+}
+
+/*浮动*/
+.float-lt {
+  float: left;
+}
+.float-rt {
+  float: right;
+}
+
+/*宽度*/
+.width15 {
+  width: 15px;
+}
+.width35 {
+
+  /* width: 35%;*/
+  width: 60px;
+}
+.width60 {
+  width: 60%;
+}
+.width100 {
+  width: 100%;
+}
+.width125 {
+  width: 125px;
+}
+
+/* 高度 */
+.height60 {
+  height: 60px;
+  line-height: 60px;
+}
+.height44 {
+  height: 44px;
+  line-height: 44px;
+}
+.height10 {
+  height: 10px;
+}
+.height1 {
+  height: 2px;
+}
+
+/* 行高 */
+.line-height50 {
+  margin: 0;
+  line-height: 50px;
+}
+
+/*间距*/
+.margin25 {
+  margin: 0 25px;
+}
+.margin-lt5 {
+  margin-left: 5px;
+}
+.margin-lt6 {
+  margin-left: 6%;
+}
+.margin-lt13 {
+  margin-left: 13px;
+}
+.margin-lt15 {
+  margin-left: 15px;
+}
+.margin-lt20 {
+  margin-left: 20px;
+}
+.margin-lt40 {
+  margin-left: 40px;
+}
+.margin-lt60 {
+  margin-left: 60px;
+}
+.margin-rt5 {
+  margin-right: 5px;
+}
+.margin-rt10 {
+  margin-right: 10%;
+}
+.margin-rt10px {
+  margin-right: 10px;
+}
+.margin-rt40 {
+  margin-right: 40px;
+}
+.margin-top4 {
+  margin-top: 4px;
+}
+.margin-top2 {
+  margin-top: 2px;
+}
+.margin-top5 {
+  margin-top: 5px;
+}
+.margin-top10 {
+  margin-top: 10px;
+}
+.margin-top-10 {
+  margin-top: 10%;
+}
+.margin-top70 {
+  margin-top: 70px;
+  z-index: 66;
+}
+.margin-bt10 {
+  margin-bottom: 10px;
+}
+.margin-bt44 {
+  margin-bottom: 44px;
+}
+.padding-lt10 {
+  padding-left: 10px;
+}
+.item .padding-lt10 {
+  padding-left: 10px;
+}
+.padding-rt10 {
+  padding-right: 10px;
+}
+.padding5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.padding-bt20 {
+  padding-bottom: 20px;
+}
+.paddingS {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.padding10 {
+  padding: 10px 16px;
+}
+.padding15 {
+  padding: 0px 15px;
+}
+.padding25 {
+  padding: 0px 25px;
+}
+.item-button-right > .top4 {
+  top: 4px;
+}
+
+/*字体大小*/
+.font-size16 {
+  font-size: 16px;
+}
+#font-size14 {
+  font-size: 14px;
+}
+.bar .font-size16 {
+  font-size: 16px;
+}
+.font-size10 {
+  font-size: 10px;
+}
+
+/*顶2格*/
+.text-indent2 {
+  text-indent: 2em;
+}
+
+/*字体颜色*/
+.button-active {
+  color: #17bddf;
+}
+.color-gray {
+  color: #626262;
+}
+.color-gray2 {
+  color: #aaa;
+}
+.color-blue {
+  color: #17bddf;
+}
+
+/*主题色*/
+
+/*列表样式*/
+.item-h2 {
+  vertical-align: middle;
+  line-height: 50px;
+}
+.item-avatar > img:first-child {
+  max-width: 50px;
+  max-height: 50px;
+}
+.item-avatar .item-content > img:first-child {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+/*背景色*/
+.bg-gray2 {
+  background: #f0f0f0;
+}
+.bg-gray3 {
+  background: #f8f8f8;
+}
+.bg-white {
+  background-color: #fff;
+}
+.bg-blue {
+  background-color: #00abec;
+}
+
+/*滚动条样式*/
+.ion-scroll-style {
+  width: 100%;
+  height: 4em;
+  white-space: nowrap;
+}
+.ion-scroll-div {
+  width: 100.5%;
+  height: 4em;
+  cursor: pointer;
+}
+.ion-scroll-box {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  line-height: 44px;
+  vertical-align: middle;
+}
+.bar .btn-scroll {
+  background: none;
+  border: none;
+  font-size: 16px;
+  vertical-align: middle;
+  color: #626262;
+}
+.bar .color-blue {
+  color: #17bddf;
+}
+
+/*描边*/
+.border-top {
+  border-top: #ddd 1px solid;
+  overflow: hidden;
+}
+.border-top2 {
+  border-top: 1px #dcdcdc solid;
+}
+.border-lt5 {
+  border-left: 3px solid #17bddf;
+  padding-left: 10px;
+}
+/*我的工作待随访*/
+.border-lt {
+  border-left: 1px solid #b4b4b4;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  z-index: 2;
+  overflow: hidden;
+}
+.border-top-none {
+  border-top: none;
+}
+.border-bt-none {
+  border-bottom: none;
+}
+
+/*按钮*/
+.button2 {
+  border-color: #626262;
+  background-color: #f8f8f8;
+  color: #626262;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0 12px;
+  min-width: 52px;
+  min-height: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  vertical-align: top;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.bar .button3 {
+  font-size: 16px;
+}
+.bar .button3:hover, .button3:hover {
+  color: #17bddf;
+}
+.button4 {
+  min-height: 34px;
+  line-height: 34px;
+  margin: 5px 20px;
+}
+.button5 {
+  min-height: 34px;
+  line-height: 34px;
+  margin: 5px 10px;
+}
+.button-phone {
+  border: none;
+  background: url(../images/phone_icon.png) no-repeat;
+  background-size: 100%;
+  min-width: 25px;
+  min-height: 25px;
+}
+.button-edit {
+  border: none;
+  background: url(../images/icon_edit.png) no-repeat;
+  background-size: 100%;
+  min-width: 25px;
+  min-height: 25px; }
+.button-tb {
+  border: none;
+  background: url(../images/refresh.png) no-repeat;
+  background-size: 100%;
+  min-width: 25px;
+  min-height: 25px;
+}
+.button-add {
+  border: none;
+  background: url(../images/icon_add.png) no-repeat;
+  background-size: 100%;
+  min-width: 25px;
+  min-height: 25px; }
+.arrow-down-button, .arrow-up-button {
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  bottom: 5px;
+}
+.arrow-down-button {
+  background: url(../images/list_arrow_down.png) no-repeat;
+  background-size: 100%;
+}
+.arrow-up-button {
+  background: url(../images/list_arrow_up.png) no-repeat;
+  background-size: 100%;
+}
+.add-img {
+  width: 25px;
+  margin-top: -8px;
+  margin-left: 10px;
+}
+
+/*我的工作*/
+.timer {
+  position: absolute;
+  left: 5px;
+  z-index: 3;
+  line-height: 82px;
+}
+.timer-img {
+  position: absolute;
+  left: 45px;
+  top: 0;
+  z-index: 3;
+}
+.item2 {
+  padding-left: 110px;
+  border-color: #fff;
+}
+
+/*弹出框背景*/
+.popup-box-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+}
+
+/* 未创建家庭信息提示框 */
+.prompt-box {
+  background: url(../images/cjjt_bg.png) no-repeat;
+  background-size: 320px;
+  position: absolute;
+  left: 0;
+  top: 170px;
+  left: 50%;
+  margin-left: -160px;
+  z-index: 66;
+  width: 100%;
+  height: 100%;
+}
+
+/* 确定弹出框 */
+.popup-box {
+  width: 251px;
+  height: auto;
+  background-color: #fff;
+  position: fixed;
+  margin: -60px auto auto -125px;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  z-index: 66;
+}
+.popup-button {
+  border: none;
+  background-color: #fff;
+  height: 45px;
+  width: 125px;
+  color: #17bddf;
+  float: left;
+}
+.popup-button:hover {
+  background-color: #dcdcdc;
+}
+.popup-radius-lt {
+  border-bottom-left-radius: 4px;
+  border-right: 1px #dcdcdc solid;
+}
+
+/*就诊信息*/
+.item-input2 {
+  padding: 6px 0 5px 0px;
+  font-size: 16px;
+}
+.item-padding {
+  padding: 6px 16px 5px 16px;
+}
+
+/*底部*/
+.footer-div {
+  background: #fff;
+  line-height: 44px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/*我的工作——用药情况*/
+.footer-btn3 li {
+  width: 30%;
+  display: inline-block;
+}
+
+/* 副标题 */
+.bar-subheader2 {
+  top: 44px;
+  display: block;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.has-subheader2 {
+  top: 180px;
+}
+.has-subheader3 {
+  top: 141px;
+}
+.has-subheader4 {
+  top: 223px;
+}
+.has-subheader5 {
+  top: 200px;
+}
+/*不良生活习惯*/
+.ul-box li {
+  float: left;
+  width: 30%;
+}
+.popup-radius-rt {
+  border-bottom-right-radius: 4px;
+}

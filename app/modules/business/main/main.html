@@ -1,0 +1,22 @@
+<ion-view cache-view="false" class="item-text-wrap">
+    <ion-side-menus>
+        <ion-side-menu-content drag-content="false">
+            <ion-view>
+                <ion-header-bar class="bar-light">
+                    <div class="buttons">
+                        <button class="button button-icon ion-ios-arrow-left" ng-click="goBack()"></button>
+                    </div>
+                    <h1 class="title">angular-ionic-on-webpack</h1>
+                </ion-header-bar>
+                <ion-content class="">
+                    <div>
+                        <calendar-pk event-source="eventSource" current-month="currentMonth" time-selected="onTimeSelected(selectedTime)" month-changed="onMonthChanged(startTime, endTime, display)"></calendar-pk>
+                    </div>
+                    <div>
+                        <span style="font-size: 1.2em;margin: 5px">如果你看到这个页面，说明项目成功运行了</span>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-side-menu-content>
+    </ion-side-menus>
+</ion-view>

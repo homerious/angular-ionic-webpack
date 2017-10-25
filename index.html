@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="description" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        function onDeviceReady() {
+            if (navigator.splashscreen)
+                setTimeout(function() {
+                    navigator.splashscreen.hide();
+                });
+        }
+        document.addEventListener('deviceready', onDeviceReady, false);
+
+        function getSignImg(url) {
+//        alert(url);
+//通过controller来获取Angular应用
+            var appElement = document.querySelector('[ng-controller=AppCtrl]');
+            //获取$scope变量
+            var $scope = angular.element(appElement).scope();
+//调用msg变量，并改变msg的值
+            $scope.tt = url;
+            //上一行改变了msg的值，如果想同步到Angular控制器中，则需要调用$apply()方法即可
+            $scope.$apply();
+            //调用控制器中的getData()方法
+            // console.log($scope.tt);
+        }
+
+    </script>
+</head>
+<body id="app" ng-app="app" ng-controller="AppCtrl" >
+<ion-nav-view animation="slide-right-left"></ion-nav-view>
+</body>
+</html>
