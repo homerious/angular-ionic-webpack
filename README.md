@@ -24,4 +24,4 @@ npm run build
 更多信息可以看本脚手架里其他两篇文章：  
 [基于webpack构建的angular 1.x工程（webpack篇）](./docs/webpack-part.md)  
 
-[基于webpack构建的angular 1.x工程（angular篇）](./docs/angular-part.md)
+[基于webpack构建的angular 1.x工程（angular篇）](./docs/angular-m-part.md)

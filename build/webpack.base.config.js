@@ -10,7 +10,7 @@ module.exports = {
         calendar_pk:root+'\\app\\assets\\lib\\calendar-pk\\release\\js\\calendar_pk.min.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.(png|jpe?g|gif|woff|svg|eot|ttf)(\?.*)?$/,
                 loader: 'url-loader',

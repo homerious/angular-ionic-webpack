@@ -12,11 +12,6 @@ var plugins = [
             NODE_ENV: JSON.stringify("development")
         }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        }
-    }),
     new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
@@ -35,7 +30,7 @@ var plugins = [
     }),
     new webpack.HotModuleReplacementPlugin()
 ];
-baseconf.module.loaders.push(
+baseconf.module.rules.push(
     {
         test: /\.css$/,
         loader: ['style-loader','css-loader'],

@@ -3,13 +3,13 @@ var path = require('path');
 var root = path.resolve(__dirname, '../');
 var merge = require('webpack-merge');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var webpack=require('webpack');
+var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var ManifestPlugin = require('webpack-manifest-plugin');
 var plugins = [
     new webpack.DefinePlugin({
         'process.env': {
-            NODE_ENV:JSON.stringify("development")
+            NODE_ENV: JSON.stringify("development")
         }
     }),
     new webpack.optimize.UglifyJsPlugin({
@@ -23,7 +23,7 @@ var plugins = [
         inject: true
     }),
     new ExtractTextPlugin({
-        filename: './css/[name].css?[contenthash:8]',
+        filename: './[name].css?[contenthash:8]',
         allChunks: true,
     }),
     new webpack.ProvidePlugin({
@@ -39,16 +39,21 @@ var plugins = [
     }),
     new ManifestPlugin(path.join('dist', 'manifest.json'))
 ];
-baseconf.module.loaders.push(
-    { test: /\.css$/,
-        loader: ['style-loader','css-loader'] }
+baseconf.module.rules.push(
+    {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: "css-loader"
+        })
+    }
 );
-module.exports=merge(baseconf,{
+module.exports = merge(baseconf, {
     output: {
-    path: root+"/dist",
+        path: root + "/dist",
         publicPath: "./",
         filename: "./js/[name].[chunkhash].js"
-},
+    },
     devtool: false,
     plugins: plugins
 });
