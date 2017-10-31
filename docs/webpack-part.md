@@ -1,11 +1,11 @@
-#基于webpack构建的angular 1.x 工程（一）webpack篇
+# 基于webpack构建的angular 1.x 工程（一）webpack篇
 
 &emsp;&emsp;现在[AngularJS](https://angularjs.org/)都已经出到4.x的版本了，可我对它的认识还是停留在1.x的版本。  
 &emsp;&emsp;之前用它是为了搭配[ionic](http://ionicframework.com/docs/)来写[web手机天气 应用](https://github.com/homerious/homerWeather)（用来应付我大学里一门学科的课设的︿(￣︶￣)︿）。之后就因为它太难学而没有继续深入下去。  
 &emsp;&emsp;现在就职的公司也有个项目是做混合式的手机app的，居然也是用[AngularJS](https://angularjs.org/)+[ionic](http://ionicframework.com/docs/)来做的，而且也是用1.x的版本。  
 &emsp;&emsp;本来没我什么事的，我这段时间都在用[Vuejs](https://cn.vuejs.org/v2/)。然后上头发现那个项目加载是在太慢了，问我有没有优化的方法。我看了下项目工程结构，发现是用[gulp](https://gulpjs.com/)打包的一个工程。可能刚开始做这个项目的时候没掌握好要点，导致整个项目臃肿不堪。[gulp](https://gulpjs.com/)我是不会的了，由于一直在用[Vuejs](https://cn.vuejs.org/v2/)，官方cli提供的模板就是用[webpack](http://webpack.github.io/docs/)打包的，而且我之前写[ReactJS](http://react-china.org/)用的也是[webpack](http://webpack.github.io/docs/)来打包的。因此，我就用了[webpack](http://webpack.github.io/docs/)来重构一下工程。然后写下这篇详细的文章，想给可能会同样遇到的这种问题的朋友做一个参考( • ̀ω•́ )✧。 
 另外，本文也可以当做webpack的一篇入门文章。 
-####首先，要先配置好工程文件。
+#### 首先，要先配置好工程文件。
 &emsp;&emsp;我先列一下我的`package.json`里的配置：
 ```
 {
@@ -91,8 +91,8 @@
 
 &emsp;&emsp;关于这份`package.json`里其他的配置有问题的可以在issue里提哈~~
 
-###然后来写webpack的配置文件
-####概述
+### 然后来写webpack的配置文件
+#### 概述
 &emsp;&emsp;安装了webpack，我们要配置好，让它按照我们的期望来工作。
 一般我们都会用 `webpack.config.js`来命名webpack的配置文件，以免和其他配置文件搞混。
 但是由于我们一般都会分开开发环境和生产环境，而对于这个两个环境打包我们要求会有点不一样。
@@ -103,7 +103,7 @@
 因此，我们就需要把开发打包和生产打包的配置分开来。这里我们就分开了 `webpack.dev.config.js`和`webpack.prod.config.js`两个文件。
 但是还是有些配置是两个文件都会用到的，本着复用的精神，所以我们还有一个 `webapck.base.config.js`来记录公共的配置。
 
-####webpack基本结构
+#### webpack基本结构
 &emsp;&emsp;webpack的配置主要分为几个部分：
 1. webpack打包文件的入口（entry）。
 2. webpack打包完文件后输出的出口（output）。
@@ -156,7 +156,7 @@ module.exports = {
 上面说过，由于项目中会有较多的.html文件要引用，所以我们还用了 `html-loader`。
 我这里还有一个 `resolve`（解析）的配置，这个是用来js里引用文件的时候，不写后缀的话，webpack就会自动为其加上.js或.json的后缀，可以省一些写后缀的时间(✧◡✧)。
 
-####开发打包配置
+#### 开发打包配置
 &emsp;&emsp;我们的开发打包配置是这样的：
 ```
 var baseconf = require('./webpack.base.config');
@@ -245,7 +245,7 @@ module.exports= server;
 &emsp;&emsp;上文我们装了个 `webpack-merge`这时就发挥作用了。正如它的名字一样，它会把两个webpack配置合并起来。然后输出。
 这样我们的开发环境配置写好了
 
-####生产环境配置
+#### 生产环境配置
 &emsp;&emsp;同样，先上配置：
 ```
 var baseconf = require('./webpack.base.config');
@@ -309,7 +309,7 @@ module.exports=merge(baseconf,{
 `ManifestPlugin`也是另外安装的，用来生成manifest缓存文件，使网站可以减少对静态资源的重复请求。
 另外你可以发现这里devtool设成了false，没有设置devserver，因为不是生产所需要的，所以没有设置。
 
-####来跑一遍吧！
+#### 来跑一遍吧！
 在你的入口的地方建立一个配置里的entry规定名字的js文件，就可以先跑一遍webpack。
 如果webpack没有报错，就说明你的配置基本是对的。
 

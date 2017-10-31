@@ -1,4 +1,5 @@
-#基于webpack构建的angular 1.x工程（angular篇）
+# 基于webpack构建的angular 1.x工程（angular篇）  
+
 &emsp;&emsp;上一篇[基于webpack构建的angular 1.x 工程（一）webpack篇]()里我们已经成功构建了整个项目的打包配置。
 接下来我们要继续让angular在工程里跑起来。
 ##首先要知道怎么改写
@@ -27,7 +28,7 @@ module.exports = angular.module("app.core",[
 ```
 &emsp;&emsp;这个是符合webpack要求的写法。首先先引入我们需要的模块，然后编写我们的模块，最后输出我们要暴露给外部调用的接口。
 于是我就把所有IIFE都改成了这种形式。
-##controller那些要怎么办？
+## controller那些要怎么办？
 接下来问题就来了，在同一个angular应用模块（module）中，各个控制器（controller）、过滤器（filters）、服务（services）等之间都是并列的兄弟关系，都是从属于模块。
 那我们应该来处理这些关系呢？
 经过查阅过别人的项目之后，我发现其实有两种写法：
@@ -100,7 +101,7 @@ importAll(require.context('./', true, /\.js$/));
 
 ```
 &emsp;&emsp;这样就解决了那些controller，filters等的问题。具体`require.context`的用法[参考这里]()
-##模块之间引用的问题
+## 模块之间引用的问题
 &emsp;&emsp;当我们往我们的模块注入其他模块（自己写的或者angular插件）的时候，这个环节也有些要注意的地方。  
 &emsp;&emsp;首先，我们知道，angular注入其他模块的时候，其实只需要写注入模块的名字就可以了，angular可以自行去寻找相应的模块。
 这样的话，我们像上面那样写的模块声明，直接输出其实会有问题：
@@ -134,7 +135,7 @@ module.exports = angular.module("app",[appCore.name]);
 &emsp;&emsp;其实如果是插件的话，你在`npm`安装的插件一般都不用担心这个问题，毕竟人家早就想到会有这个问题了。
 但是如果是其他途径弄来的话，这个就复杂了。
 
-##插件注入的另一种问题
+## 插件注入的另一种问题
 &emsp;&emsp;上面提到的是插件注入可能会遇到的问题之一。然而还有一种情况。
 这种情况就是插件也使用了IIFE（立即执行函数表达式）。
 听起来就很烦。自己的代码，自己知道怎么写的，所以改起来不会怎么出问题，但是别人的代码的话就不一定了。

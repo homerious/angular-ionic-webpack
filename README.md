@@ -1,4 +1,4 @@
-##基于webpack构建的angular1.x + ionic 1.x 工程
+## 基于webpack构建的angular1.x + ionic 1.x 工程
 
 这是一个基于webpack的angular 1.x和ionic 1.x的工程脚手架。    
 
