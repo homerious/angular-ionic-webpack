@@ -145,8 +145,12 @@ module.exports = angular.module("app",[appCore.name]);
   
 [基于webpack构建的angular 1.x 工程（一）webpack篇](./webpack-part.md)
   
-想看详细代码，可以访问我的项目地址 
-[]()  
+用于参考的一位前辈的类似项目,让大家也参考一下：  
+[https://github.com/IamBusy/webpack-angular](https://github.com/IamBusy/webpack-angular)  
+ 
+  
+想看详细代码，可以访问我的项目地址  
+[https://github.com/homerious/angular-ionic-webpack](https://github.com/homerious/angular-ionic-webpack)
 
 有什么问题或者不对的地方欢迎指出，谢谢阅读！  
 

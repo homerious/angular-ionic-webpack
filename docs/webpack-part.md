@@ -318,7 +318,7 @@ module.exports=merge(baseconf,{
 [基于webpack构建的angular 1.x工程（angular篇）](./angular-m-part.md)
 
 想看详细代码，可以访问我的项目地址 
-[]()  
+[https://github.com/homerious/angular-ionic-webpack](https://github.com/homerious/angular-ionic-webpack)  
 
 有什么问题或者不对的地方欢迎指出，谢谢阅读！  
 
