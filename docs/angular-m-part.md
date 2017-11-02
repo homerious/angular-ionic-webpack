@@ -1,6 +1,6 @@
 # 基于webpack构建的angular 1.x工程（angular篇）  
 
-&emsp;&emsp;上一篇[基于webpack构建的angular 1.x 工程（一）webpack篇]()里我们已经成功构建了整个项目的打包配置。
+&emsp;&emsp;上一篇[基于webpack构建的angular 1.x 工程（一）webpack篇](./webpack-part.md)里我们已经成功构建了整个项目的打包配置。
 接下来我们要继续让angular在工程里跑起来。
 ## 首先要知道怎么改写
 之前的工程由于是用gulp打包的，具体原理我不太懂，不过貌似会把所有的js自动注入到index.html中。
