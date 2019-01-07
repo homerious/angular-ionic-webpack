@@ -1,6 +1,6 @@
 # 基于webpack构建的angular 1.x 工程（一）webpack篇
 
-&emsp;&emsp;现在[AngularJS](https://angularjs.org/)都已经出到4.x的版本了，可我对它的认识还是停留在1.x的版本。  
+&emsp;&emsp;现在[Angular](https://angularjs.org/)都已经出到4.x的版本了，可我对它的认识还是停留在Angularjs1.x。  
 &emsp;&emsp;之前用它是为了搭配[ionic](http://ionicframework.com/docs/)来写[web手机天气 应用](https://github.com/homerious/homerWeather)（用来应付我大学里一门学科的课设的︿(￣︶￣)︿）。之后就因为它太难学而没有继续深入下去。  
 &emsp;&emsp;现在就职的公司也有个项目是做混合式的手机app的，居然也是用[AngularJS](https://angularjs.org/)+[ionic](http://ionicframework.com/docs/)来做的，而且也是用1.x的版本。  
 &emsp;&emsp;本来没我什么事的，我这段时间都在用[Vuejs](https://cn.vuejs.org/v2/)。然后上头发现那个项目加载是在太慢了，问我有没有优化的方法。我看了下项目工程结构，发现是用[gulp](https://gulpjs.com/)打包的一个工程。可能刚开始做这个项目的时候没掌握好要点，导致整个项目臃肿不堪。[gulp](https://gulpjs.com/)我是不会的了，由于一直在用[Vuejs](https://cn.vuejs.org/v2/)，官方cli提供的模板就是用[webpack](http://webpack.github.io/docs/)打包的，而且我之前写[ReactJS](http://react-china.org/)用的也是[webpack](http://webpack.github.io/docs/)来打包的。因此，我就用了[webpack](http://webpack.github.io/docs/)来重构一下工程。然后写下这篇详细的文章，想给可能会同样遇到的这种问题的朋友做一个参考( • ̀ω•́ )✧。 
